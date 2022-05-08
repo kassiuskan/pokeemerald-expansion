@@ -91,6 +91,15 @@ void SetBagItemsPointers(void)
 
     gBagPockets[BERRIES_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_Berries;
     gBagPockets[BERRIES_POCKET].capacity = BAG_BERRIES_COUNT;
+
+    gBagPockets[MEDICINE_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_Medicine;
+    gBagPockets[MEDICINE_POCKET].capacity = BAG_MEDICINE_COUNT;
+
+    gBagPockets[BATTLEITEMS_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_BattleItems;
+    gBagPockets[BATTLEITEMS_POCKET].capacity = BAG_BATTLEITEMS_COUNT;
+
+    gBagPockets[TREASURES_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_Treasures;
+    gBagPockets[TREASURES_POCKET].capacity = BAG_TREASURES_COUNT;
 }
 
 void CopyItemName(u16 itemId, u8 *dst)
@@ -1102,7 +1111,7 @@ static void ShowItemIconSprite(u16 item, bool8 firstTime, bool8 flash)
         if (!firstTime)
         {
             //show in message box
-            x = 220;
+            x = 224;
             y = 140;
         }
         else
