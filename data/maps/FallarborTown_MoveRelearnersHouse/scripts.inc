@@ -14,8 +14,6 @@ FallarborTown_MoveRelearnersHouse_EventScript_MoveRelearner::
 	end
 
 FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove::
-	checkitem ITEM_HEART_SCALE
-	goto_if_eq VAR_RESULT, FALSE, FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
 	msgbox FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove, MSGBOX_YESNO
 	switch VAR_RESULT
 	case NO, FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
@@ -39,7 +37,6 @@ FallarborTown_MoveRelearnersHouse_EventScript_ChooseMove::
 	waitstate
 	goto_if_eq VAR_0x8004, 0, FallarborTown_MoveRelearnersHouse_EventScript_ChooseMon
 	msgbox FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale, MSGBOX_DEFAULT
-	removeitem ITEM_HEART_SCALE
 	goto FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
 	end
 
@@ -59,41 +56,42 @@ FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale::
 	end
 
 FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor:
-	.string "I'm the MOVE TUTOR.\p"
+	.string "I'm the MOVE REMEBER.\p"
 	.string "I know all the moves that POKéMON\n"
-	.string "learn--every one of them--and I can\l"
+	.string "learn-every one of them-and I can\l"
 	.string "teach POKéMON those moves.\p"
-	.string "I can teach a move to a POKéMON\n"
+	.string "I can teach a MOVE to a POKéMON\n"
 	.string "of yours if you'd like.\p"
-	.string "I'll do it for a HEART SCALE.\n"
-	.string "I'm collecting those now.$"
+	.string "I'm going to do this because,\n"
+	.string "i really like POKéMON\p"
+	.string "Let's go then.$"
 
 FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove:
-	.string "Oh! That's it! That's an honest to\n"
-	.string "goodness HEART SCALE!\p"
-	.string "Let me guess, you want me to teach\n"
-	.string "a move?$"
+	.string "Oh! That's it! That's just because\n"
+	.string "I like POKéMON that I do it.\p"
+	.string "Let me guess, do you want to recall\n"
+	.string "a MOVE?$"
 
 FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon:
-	.string "Which POKéMON needs tutoring?$"
+	.string "Which POKéMON needs to remember MOVE?$"
 
 FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove:
-	.string "Which move should I teach?$"
+	.string "Which MOVE should I teach?$"
 
 FallarborTown_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon:
 	.string "Sorry…\p"
-	.string "It doesn't appear as if I have any move\n"
+	.string "It doesn't appear as if I have any MOVE\n"
 	.string "I can teach that POKéMON.$"
 
 FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale:
-	.string "{PLAYER} handed over one HEART SCALE\n"
-	.string "in exchange.$"
+	.string "{PLAYER} just remembered a MOVE\n"
+	.string "to your pokemon.$"
 
 FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale:
-	.string "If your POKéMON need to learn a move,\n"
-	.string "come back with a HEART SCALE.$"
+	.string "If your POKéMON needs to relearn a MOVE,\n"
+	.string "come back here with more time..$"
 
 FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg:
-	.string "Hunh? There isn't a single move that\n"
+	.string "Hunh? There isn't a single MOVE that\n"
 	.string "I can teach an EGG.$"
 

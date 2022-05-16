@@ -36,6 +36,7 @@
 #include "constants/trainer_hill.h"
 #include "strings.h"
 #include "field_message_box.h"
+#include "event_scripts.h"
 
 static EWRAM_DATA u8 sWildEncounterImmunitySteps = 0;
 static EWRAM_DATA u16 sPreviousPlayerMetatileBehavior = 0;
@@ -202,7 +203,7 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
             gPlayerAvatar.flags += PLAYER_AVATAR_FLAG_ACRO_BIKE;
             SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE);
             PlaySE(SE_BIKE_HOP);
-			ScriptContext1_SetupScript(EventScript_BikeMachMsg);
+			ScriptContext1_SetupScript(EventScript_BikeAcroMsg);
         }
         else
         {
@@ -210,7 +211,7 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
             gPlayerAvatar.flags += PLAYER_AVATAR_FLAG_MACH_BIKE;
             SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_MACH_BIKE);
             PlaySE(SE_BIKE_BELL);
-			ScriptContext1_SetupScript(EventScript_TestSignpostMsg);
+			ScriptContext1_SetupScript(EventScript_BikeMachMsg);
         }
     }
 

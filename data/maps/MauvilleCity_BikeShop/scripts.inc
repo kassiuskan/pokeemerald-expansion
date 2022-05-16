@@ -202,6 +202,10 @@ MauvilleCity_BikeShop_Text_ExplainBikesChooseWhichOne:
 	.string "I'll tell you what!\n"
 	.string "I'll give you a BIKE!\p"
 	.string "Oh, wait a second!\p"
+	//dialogo do botão "R"
+	.string "our bikes are equipped with two functions\n" 
+	.string "the ACRO and MACH which you can switch\p"
+	.string "between them using the R Button\p"
 	.string "I forgot to tell you that there are\n"
 	.string "two kinds of BIKES!\p"
 	.string "They are the MACH BIKE and\n"
@@ -211,14 +215,15 @@ MauvilleCity_BikeShop_Text_ExplainBikesChooseWhichOne:
 	.string "And an ACRO BIKE is for those who\n"
 	.string "prefer technical rides!\p"
 	.string "I'm a real sweetheart, so you can\n"
-	.string "have whichever one you like!\p"
+	.string "but i have a problem!\p"
+	.string "i'm just going to have it in BLUE and RED\n"
 	.string "Which one will you choose?$"
 
 MauvilleCity_BikeShop_Text_ChoseMachBike:
-	.string "{PLAYER} chose the MACH BIKE.$"
+	.string "{PLAYER} chose the BLUE BIKE.$"
 
 MauvilleCity_BikeShop_Text_ChoseAcroBike:
-	.string "{PLAYER} chose the ACRO BIKE.$"
+	.string "{PLAYER} chose the RED BIKE.$"
 
 MauvilleCity_BikeShop_Text_ComeBackToSwitchBikes:
 	.string "RYDEL: If you get the urge to switch\n"
@@ -233,12 +238,12 @@ MauvilleCity_BikeShop_Text_IllSwitchBikes:
 	.string "I'll switch BIKES for you!$"
 
 MauvilleCity_BikeShop_Text_ExchangedMachForAcro:
-	.string "{PLAYER} got the MACH BIKE exchanged\n"
-	.string "for an ACRO BIKE.$"
+	.string "{PLAYER} got the BLUE BIKE exchanged\n"
+	.string "for an RED BIKE.$"
 
 MauvilleCity_BikeShop_Text_ExchangedAcroForMach:
-	.string "{PLAYER} got the ACRO BIKE exchanged\n"
-	.string "for a MACH BIKE.$"
+	.string "{PLAYER} got the RED BIKE exchanged\n"
+	.string "for a BLUE BIKE.$"
 
 MauvilleCity_BikeShop_Text_HappyYouLikeIt:
 	.string "RYDEL: Good, good!\n"

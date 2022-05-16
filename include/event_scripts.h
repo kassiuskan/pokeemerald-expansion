@@ -2,6 +2,8 @@
 #define GUARD_EVENT_SCRIPTS_H
 
 extern const u8 EventScript_TestSignpostMsg[];
+extern const u8 EventScript_BikeMachMsg[];
+extern const u8 EventScript_BikeAcroMsg[];
 extern const u8 EventScript_TryGetTrainerScript[];
 extern const u8 EventScript_StartTrainerApproach[];
 extern const u8 EventScript_DoNoIntroTrainerBattle[];

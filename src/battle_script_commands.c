@@ -1081,6 +1081,19 @@ static const u8 sForbiddenMoves[MOVES_COUNT] =
     [MOVE_ZIPPY_ZAP] = FORBIDDEN_METRONOME,
 };
 
+/*  AQUI static const u8 sExpBlockLevels[] =
+{
+    15, //badge 1
+    19, //badge 2
+    24, //badge 3
+    29, //badge 4
+    31, //badge 5
+    33, //badge 6
+    45, //badge 7
+    50, //badge 8
+};*/
+
+
 static const u16 sNaturePowerMoves[BATTLE_TERRAIN_COUNT] =
 {
 #if B_NATURE_POWER_MOVES >= GEN_7
@@ -3829,6 +3842,19 @@ static void Cmd_jumpbasedontype(void)
     }
 }
 
+/*static u8 GetNumOfBadges(void)
+{
+    u8 NumOfBadges = 0;
+
+    while (FlagGet(FLAG_BADGE01_GET + NumOfBadges))
+    {
+        NumOfBadges++;
+        if (NumOfBadges == NUM_BADGES)
+            break;
+    }
+    return NumOfBadges;
+}*/
+
 static void Cmd_getexp(void)
 {
     u16 item;
@@ -3918,6 +3944,7 @@ static void Cmd_getexp(void)
         }
         // fall through
     case 2: // set exp value to the poke in expgetter_id and print message
+		// AQUI i = GetNumOfBadges();
         if (gBattleControllerExecFlags == 0)
         {
             item = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HELD_ITEM);
@@ -3943,6 +3970,15 @@ static void Cmd_getexp(void)
                 MonGainEVs(&gPlayerParty[gBattleStruct->expGetterMonId], gBattleMons[gBattlerFainted].species);
             #endif
             }
+				
+        /*  AQUI  else if (i != NUM_BADGES && GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) >= sExpBlockLevels[i])
+	    {
+		    *(&gBattleStruct->sentInPokes) >>= 1;
+		    gBattleScripting.getexpState = 5;
+		    gBattleMoveDamage = 0;
+	    }
+		*/
+		
             else
             {
                 // Music change in a wild battle after fainting opposing pokemon.

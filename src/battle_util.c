@@ -6686,7 +6686,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 {
                     goto LEFTOVERS;
                 }
-                else if (GetBattlerAbility(battlerId) != ABILITY_MAGIC_GUARD && !moveTurn)
+                else if (!moveTurn && GetBattlerAbility(battlerId) != ABILITY_MAGIC_GUARD)
                 {
                     gBattleMoveDamage = gBattleMons[battlerId].maxHP / 8;
                     if (gBattleMoveDamage == 0)
