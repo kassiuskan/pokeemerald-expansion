@@ -3145,29 +3145,20 @@ const u16 gEggMoves[] = {
 
 //ALOLA
     egg_moves(ROWLET,
-        MOVE_CURSE,
         MOVE_CONFUSE_RAY,
-        MOVE_OMINOUS_WIND,
-        MOVE_HAZE,
-        MOVE_BATON_PASS,
-        MOVE_DEFOG),
+        MOVE_KNOCK_OFF,
+        MOVE_DEFOG,
+        MOVE_DOUBLE_TEAM),
 
     egg_moves(LITTEN,
-        MOVE_NASTY_PLOT,
-        MOVE_BODY_SLAM,
-        MOVE_CRUNCH,
         MOVE_FAKE_OUT,
-        MOVE_REVENGE,
-        MOVE_HEAT_WAVE,
+        MOVE_PARTING_SHOT,
         MOVE_POWER_TRIP),
 
     egg_moves(POPPLIO,
-        MOVE_CHARM,
-        MOVE_AMNESIA,
         MOVE_AQUA_RING,
-        MOVE_AROMATIC_MIST,
         MOVE_PERISH_SONG,
-        MOVE_WONDER_ROOM),
+        MOVE_LIFE_DEW),
 
     egg_moves(PIKIPEK,
         MOVE_BRAVE_BIRD,
@@ -3185,9 +3176,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(GRUBBIN,
         MOVE_HARDEN,
-        MOVE_ELECTROWEB,
-        MOVE_MUD_SHOT,
-        MOVE_ENDURE),
+        MOVE_DISCHARGE),
 
     egg_moves(CRABRAWLER,
         MOVE_WIDE_GUARD,
@@ -3202,21 +3191,16 @@ const u16 gEggMoves[] = {
         MOVE_CAPTIVATE),
 
     egg_moves(CUTIEFLY,
-        MOVE_BATON_PASS,
-        MOVE_SKILL_SWAP,
-        MOVE_SPEED_SWAP,
-        MOVE_BESTOW,
         MOVE_MOONBLAST,
-        MOVE_POWDER,
-        MOVE_STICKY_WEB),
+        MOVE_STICKY_WEB,
+        MOVE_AROMATIC_MIST),
 
     egg_moves(ROCKRUFF,
-        MOVE_CRUSH_CLAW,
-        MOVE_FIRE_FANG,
-        MOVE_THUNDER_FANG,
-        MOVE_SUCKER_PUNCH,
+        MOVE_ENDEAVOR,
+        MOVE_LAST_RESORT,
         MOVE_THRASH),
 
+//PAREI
     egg_moves(WISHIWASHI,
         MOVE_MUDDY_WATER,
         MOVE_MIST,

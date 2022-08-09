@@ -1082,8 +1082,8 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
     if (gBattleStruct->mega.evolvedPartyIds[GetBattlerSide(battler)] & gBitTable[gBattlerPartyIndexes[battler]]
      || gBattleStruct->mega.primalRevertedPartyIds[GetBattlerSide(battler)] & gBitTable[gBattlerPartyIndexes[battler]])
     {
-        objVram = ConvertIntToDecimalStringN(text, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
-        xPos = 5 * (3 - (objVram - (text + 2))) - 1;
+        objVram = ConvertIntToDecimalStringN(text, lvl, STR_CONV_MODE_LEFT_ALIGN, 2);
+        xPos = 5 * (3 - (objVram - (text + 2))) - 2;
     }
     else
     {
@@ -1095,7 +1095,7 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
     }
 
     xPos = 5 * (3 - (objVram - (text + 2)));
-    windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, xPos, 3, 2, &windowId);
+    windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, xPos + 4, 3, 2, &windowId);
     spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum * TILE_SIZE_4BPP;
 
     if (GetBattlerSide(battler) == B_SIDE_PLAYER)
@@ -1111,7 +1111,7 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
         objVram = (void*)(OBJ_VRAM0);
         objVram += spriteTileNum + 0x400;
     }
-    TextIntoHealthboxObject(objVram, windowTileData, 3);
+    TextIntoHealthboxObject(objVram, windowTileData, 4);
     RemoveWindowOnHealthbox(windowId);
 }
 
@@ -2149,11 +2149,17 @@ static void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
             ptr += spriteTileNum + 0x800;
         else
             ptr += spriteTileNum + 0x400;
-        TextIntoHealthboxObject(ptr, windowTileData + 0xC0, 1);
+        TextIntoHealthboxObject(ptr, windowTileData + 0xC0, 2);
     }
     else
     {
         TextIntoHealthboxObject((void*)(OBJ_VRAM0 + 0x20 + spriteTileNum), windowTileData, 7);
+		        ptr = (void*)(OBJ_VRAM0);
+        if (!IsDoubleBattle())
+            ptr += spriteTileNum + 0x400;
+        else
+            ptr += spriteTileNum + 0x400;
+        TextIntoHealthboxObject(ptr, windowTileData + 0xE0, 1);
     }
 
     RemoveWindowOnHealthbox(windowId);
@@ -2952,7 +2958,7 @@ static void PrintBattlerOnAbilityPopUp(u8 battlerId, u8 spriteId1, u8 spriteId2)
     int i;
     u8 lastChar;
     u8* name;
-    u8 monName[POKEMON_NAME_LENGTH + 3] = {0};
+    u8 monName[POKEMON_NAME_LENGTH + 0] = {0};
     u8* nick = gBattleMons[battlerId].nickname;
 
     for (i = 0; i < POKEMON_NAME_LENGTH; ++i)
