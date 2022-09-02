@@ -2004,7 +2004,11 @@ const u16 gEggMoves[] = {
         MOVE_DRAGON_DANCE,
         MOVE_FIRE_FANG),
 
+<<<<<<< HEAD
 //SINOOH
+=======
+#if P_NEW_POKEMON == TRUE
+>>>>>>> 59f1f10dec4cfd87f21668404e33a21a92f3f84d
     egg_moves(TURTWIG,
         MOVE_WORRY_SEED,
         MOVE_GROWTH,
@@ -3733,6 +3737,7 @@ const u16 gEggMoves[] = {
         MOVE_FAKE_OUT,
         MOVE_PSYCHO_SHIFT,
         MOVE_HEAL_PULSE),
+#endif
 
     EGG_MOVES_TERMINATOR
 };
